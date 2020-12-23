@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Weather web page</title>
+</head>
+
+<body>
+
+<header>
+    <h1>Погода здесь</h1>
+    <button class="update_button_text">Обновить геолокацию</button>
+</header>
+
+<main>
+    <div class="error"></div>
+    <section id="place_for_waiting_label"></section>
+    <div class="main_city"></div>
+    <div class="favorite_section">
+        <h2 class="favorite">Избранное</h2>
+        <form class="add_new_city">
+            <label for="add_new_city"></label><input id="add_new_city" type="text" placeholder="Добавить новый город">
+            <button class="button_sign">+</button>
+        </form>
+    </div>
+
+    <ul class="cities"></ul>
+
+</main>
+
+<template id="main_city_waiting">
+    <section class="waiting">
+        <img class="refresh-icon" src='images/waiting.gif' alt="waiting.gif">
+    </section>
+</template>
+
+<template id="city_waiting">
+    <li class="weather_city">
+        <div class="main_info">
+            <h3 class="city_name"></h3>
+            <button class="delete-button">×</button>
+            <div class="weather_info">
+                <div class="waiting">
+                    <h3>Подождите, данные загружаются...</h3>
+                    <img class="refresh-icon" src='images/waiting.gif' alt="waiting.gif">
+                </div>
+            </div>
+        </div>
+    </li>
+</template>
+
+<template id="main_city_now">
+    <div class="left_main_city">
+        <h2 class="city_name"></h2>
+        <div class="main_info">
+            <img class="icon-weather">
+            <div class="degrees"></div>
+        </div>
+    </div>
+    <div class="weather_info">
+        <ul>
+            <li class="wind_line">
+                <div class="name">Ветер</div>
+                <div class="info"></div>
+            </li>
+            <li class="cloudiness_line">
+                <div class="name">Облачность</div>
+                <div class="info"></div>
+            </li>
+            <li class="pressure_line">
+                <div class="name">Давление</div>
+                <div class="info"></div>
+            </li>
+            <li class="humidity_line">
+                <div class="name">Влажность</div>
+                <div class="info"></div>
+            </li>
+            <li class="coordinates_line">
+                <div class="name">Координаты</div>
+                <div class="info"></div>
+            </li>
+        </ul>
+    </div>
+</template>
+
+<template id="waiting_label">
+    <h3 class="label">Подождите пока данные загрузятся</h3>
+</template>
+
+<template id="city">
+    <li class="weather_city">
+        <div class="main_info">
+            <h3 class="city_name"></h3>
+            <div class="degrees"></div>
+            <img class="icon-weather">
+            <button class="delete-button">×</button>
+        </div>
+        <div class="weather_info">
+            <ul>
+                <li class="wind_line">
+                    <div class="name">Ветер</div>
+                    <div class="info"></div>
+                </li>
+                <li class="cloudiness_line">
+                    <div class="name">Облачность</div>
+                    <div class="info"></div>
+                </li>
+                <li class="pressure_line">
+                    <div class="name">Давление</div>
+                    <div class="info"></div>
+                </li>
+                <li class="humidity_line">
+                    <div class="name">Влажность</div>
+                    <div class="info"></div>
+                </li>
+                <li class="coordinates_line">
+                    <div class="name">Координаты</div>
+                    <div class="info"></div>
+                </li>
+            </ul>
+        </div>
+    </li>
+
+</template>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
